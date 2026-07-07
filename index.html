@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your Orvia account &amp; data</title>
+<meta name="description" content="How to permanently delete your Orvia account and associated data.">
+<style>
+  :root{
+    --iris:#5b5bd6;--iris-strong:#4a45c4;--iris-tint:#eeedfb;--bg:#f7f6fb;--surface:#fff;
+    --ink:#1b1a24;--muted:#6b6880;--line:#e7e4f0;--rose:#c8452f;
+    --shadow:0 1px 2px rgba(28,26,40,.04),0 12px 32px -18px rgba(28,26,40,.18);
+    --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --iris:#928ff2;--iris-strong:#a7a4f6;--iris-tint:#211f33;--bg:#121118;--surface:#1b1a23;
+    --ink:#ecebf4;--muted:#9d99b2;--line:#2b2836;--rose:#f08a76;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 16px 40px -20px rgba(0,0,0,.6);
+  }}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(20px,5vw,24px) 72px}
+  .brand{display:flex;align-items:center;justify-content:space-between;padding-bottom:22px;margin-bottom:40px;border-bottom:1px solid var(--line)}
+  .mark{display:flex;align-items:center;gap:10px}
+  .glyph{width:26px;height:26px;border-radius:8px;background:linear-gradient(145deg,var(--iris),var(--iris-strong));display:grid;place-items:center;color:#fff;flex:none;box-shadow:0 4px 12px -4px var(--iris)}
+  .glyph svg{width:15px;height:15px}
+  .wordmark{font-family:var(--serif);font-size:1.4rem}
+  .tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:600}
+  .eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--iris);font-weight:700;margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,6vw,2.7rem);line-height:1.1;letter-spacing:-.01em;text-wrap:balance;margin:0 0 18px}
+  .lede{font-size:1.08rem;color:var(--muted);max-width:54ch;margin:0 0 44px}
+  section{margin-bottom:42px}
+  h2{font-size:1.02rem;font-weight:700;margin:0 0 18px;display:flex;align-items:baseline;gap:10px}
+  h2 .n{font-family:var(--serif);font-size:.95rem;color:var(--iris);font-weight:600}
+  ol.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+  ol.steps li{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+  .step-n{flex:none;width:26px;height:26px;border-radius:8px;background:var(--iris-tint);color:var(--iris);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+  .step-t{color:var(--muted)} .step-t b{color:var(--ink);font-weight:600}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:520px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+  .card h3{margin:0 0 14px;font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;display:flex;align-items:center;gap:8px}
+  .card.removed h3{color:var(--rose)} .card.kept h3{color:var(--iris)}
+  .dot{width:8px;height:8px;border-radius:50%;flex:none}
+  .card.removed .dot{background:var(--rose)} .card.kept .dot{background:var(--iris)}
+  .card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+  .card li{font-size:.93rem;color:var(--muted);padding-left:18px;position:relative}
+  .card li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--line)}
+  .card.removed li::before{background:var(--rose);opacity:.55}
+  .card.kept li::before{background:var(--iris);opacity:.55}
+  .callout{background:var(--iris-tint);border:1px solid var(--iris);border-radius:14px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+  .callout svg{flex:none;width:18px;height:18px;color:var(--iris);margin-top:2px}
+  .callout p{font-size:.93rem;color:var(--ink);margin:0}
+  .contact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);text-align:center}
+  .contact p{margin:0 auto 16px;color:var(--muted);max-width:46ch}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--iris);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;padding:11px 20px;border-radius:11px;box-shadow:0 6px 16px -6px var(--iris);transition:background .15s,transform .15s}
+  .btn:hover{background:var(--iris-strong);transform:translateY(-1px)} .btn svg{width:16px;height:16px}
+  .addr{margin:14px 0 0;font-size:.85rem} .addr a{color:var(--iris)}
+  a:focus-visible,.btn:focus-visible{outline:2px solid var(--iris);outline-offset:3px;border-radius:6px}
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  p{margin:0 0 14px}
+  @media (prefers-reduced-motion:no-preference){.wrap{animation:rise .5s cubic-bezier(.22,1,.36,1) both}}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brand">
+    <div class="mark">
+      <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V7l7-4z"/></svg></span>
+      <span class="wordmark">Orvia</span>
+    </div>
+    <span class="tag">Data &amp; privacy</span>
+  </header>
+  <p class="eyebrow">Account &amp; data</p>
+  <h1>Delete your Orvia account and data</h1>
+  <p class="lede">You can permanently delete your Orvia account and everything tied to it, at any time. Here's exactly what happens and how to do it.</p>
+  <section>
+    <h2><span class="n">01</span> Delete from inside the app</h2>
+    <ol class="steps">
+      <li><span class="step-n">1</span><span class="step-t">Open <b>Settings</b>, then tap your profile at the top to open <b>Account</b>.</span></li>
+      <li><span class="step-n">2</span><span class="step-t">Scroll down and tap <b>Delete account</b>. Confirm your identity, then confirm the deletion.</span></li>
+    </ol>
+  </section>
+  <section>
+    <h2><span class="n">02</span> What happens to your data</h2>
+    <div class="cards">
+      <div class="card removed">
+        <h3><span class="dot"></span> Permanently removed</h3>
+        <ul><li>Profile &amp; onboarding details</li><li>Tasks, goals &amp; milestones</li><li>Focus sessions &amp; activity history</li><li>AI assistant conversations</li><li>Feedback you've sent</li></ul>
+      </div>
+      <div class="card kept">
+        <h3><span class="dot"></span> Kept on record</h3>
+        <ul><li>Purchase &amp; subscription records</li><li>Retained only for financial and legal recordkeeping</li><li>Not used to identify you after deletion</li></ul>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <p>Deleting your account does <b>not</b> cancel an active Google&nbsp;Play subscription. Manage or cancel that separately in the Google&nbsp;Play Store.</p>
+    </div>
+  </section>
+  <section>
+    <h2><span class="n">03</span> Can't open the app?</h2>
+    <div class="contact">
+      <p>If you've already removed Orvia from your device, email us from the address on your account and we'll process your deletion request.</p>
+      <a class="btn" href="mailto:harral008@gmail.com?subject=Delete%20my%20Orvia%20account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Email a deletion request</a>
+      <p class="addr">or write to <a href="mailto:harral008@gmail.com">harral008@gmail.com</a></p>
+    </div>
+  </section>
+  <footer>
+    <span>Orvia · Account &amp; data deletion</span>
+    <span>Requests actioned within 30 days</span>
+  </footer>
+</div>
+</body>
+</html>
